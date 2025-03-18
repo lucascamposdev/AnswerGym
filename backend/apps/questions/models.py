@@ -32,5 +32,8 @@ class Question(models.Model):
     answer = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        unique_together = ("topic", "question")
+        
     def __str__(self):
         return self.text
