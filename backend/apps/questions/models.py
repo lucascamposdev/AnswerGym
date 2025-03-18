@@ -8,7 +8,7 @@ class Category(models.Model):
 
 class Question(models.Model):
     categories = models.ManyToManyField(Category, related_name="questions")  
-    question = models.TextField()
+    name = models.TextField(unique=True)
     answer = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
 
