@@ -19,4 +19,4 @@ class TopicSerializer(serializers.ModelSerializer):
 class QuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Question
-        fields = ["id", "topic", "text", "created_at"]
+        fields = ["id", "topic", "question", "answer", "created_at"]
